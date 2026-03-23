@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+<!-- Navbar -->
+<header>
+  <h1 style="color: red;">Zamir</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+  </nav>
+</header>
+<section class="featured">
+
+  <div class="featured-content">
+    <h1>Mafia Game</h1>
+    <p>A story-driven open world game inspired by Peaky Blinders.</p>
+
+    <button onclick="openPopup(
+      'Mafia Game',
+      'https://assetsio.gnwcdn.com/mafia-definitive-edition-review-a-generous-remake-that-still-shows-some-age-1600945390305.jpg?width=1600&height=900&fit=crop&quality=100&format=png&enable=upscale&auto=webp',
+      '2025',
+      ['Open world system','Story design','AI systems','Vehicles']
+    )">
+      ▶ View Project
+    </button>
+  </div>
+
+</section>
+
+<!-- Hero -->
+<section class="hero">
+  <h2 id="typing"></h2>
+</section>
+
+<!-- About -->
+<section id="about" class="fade-in">
+  <h2>About Me</h2>
+  <p style="color: white;">I am a game developer focused on Unreal Engine 5 and system design.</p>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="fade-in">
+  <h2>Skills</h2>
+
+  <div class="cards">
+
+    <div class="card" onclick="openPopup('Web Development','Web Dev.png','2026',['HTML structure','CSS styling','JavaScript DOM','Built portfolio website'])">
+      <img src="Web Dev.png">
+      <div class="card-title">Web Dev</div>
+    </div>
+
+    <div class="card" onclick="openPopup('Unreal Engine 5','Blueprintscripting.png','2025',['Weapon system','Vehicle system','Game mechanics'])">
+      <img src="Blueprintscripting.png">
+      <div class="card-title">UE5 blueprint scripting</div>
+    </div>
+
+    <div class="card" onclick="openPopup('Cloud Computing','Cloud.png','2026',['IaaS, PaaS, SaaS','Virtual machines','Cloud deployment'])">
+      <img src="Cloud.png">
+      <div class="card-title">Cloud Computing</div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Projects-->
+<section id="projects" class="fade-in">
+  <h2>Projects</h2>
+
+  <section class="row">
+    <div class="cards"> <!-- THIS WAS MISSING -->
+
+      <div class="card" onclick="openPopup('Weapon System','https://media.fab.com/image_previews/gallery_images/c8dd29e7-4617-4262-8bd5-11a0984df18e/f98f308f-eea6-47a3-949a-81ed64476a5c.png','November 2025',['dowloaded and imported Gun models','Created a Parent and child blueprint system for guns','Created Primary/Secondary weapon slots','Added functionality to guns for picking and droping ,shooting , reloading , and switching guns ','added Reload system and UI for Reload system','Added 8 way walking animations for primary and secondary weapons '])">
+        <img src="https://media.fab.com/image_previews/gallery_images/c8dd29e7-4617-4262-8bd5-11a0984df18e/f98f308f-eea6-47a3-949a-81ed64476a5c.png">
+        <div class="card-title">Weapon System</div>
+      </div>
+
+      <div class="card" onclick="openPopup('Vehicle System','https://carla-ue5.readthedocs.io/en/latest/img/tuto_content_authoring_vehicles/single_convex_hull.png','December 2025',['understandin and learning Car mechanics and how does it work with torq' ,'Used Chaos vehicle system for basic mechanics like wheel physics and suspension ','added controls and UI speedometer for car','added functionality of driving the car','added enter and exit the car and driving animation','integrated weapon system with vehicle system so that if a person has weapon in hand while entering it does colllid with car and get drop'])">
+        <img src="https://carla-ue5.readthedocs.io/en/latest/img/tuto_content_authoring_vehicles/single_convex_hull.png">
+        <div class="card-title">Vehicle System</div>
+      </div>
+
+      <div class="card" onclick="openPopup('Mafia Game','https://assetsio.gnwcdn.com/mafia-definitive-edition-review-a-generous-remake-that-still-shows-some-age-1600945390305.jpg?width=1600&height=900&fit=crop&quality=100&format=png&enable=upscale&auto=webp','November 2025',['Got inspiration fo creating Mafia game by Watching Peaky BLinders and Played Mafia 1 Defenitive edition and find some of the bugs or feature which can uplift game mafia 1','I listed down all the bugs and features that lack in Mafia 1 game','started with basic 8 way walking system,Weapon system,Vehicle System',' Right now Writing Story for this Game'])">
+        <img src="https://assetsio.gnwcdn.com/mafia-definitive-edition-review-a-generous-remake-that-still-shows-some-age-1600945390305.jpg?width=1600&height=900&fit=crop&quality=100&format=png&enable=upscale&auto=webp">
+        <div class="card-title">Mafia Game</div>
+      </div>
+
+    </div>
+  </section>
+
+</section>
+<div id="popup" class="popup">
+  <div class="popup-content">
+
+    <span class="close-btn" onclick="closePopup()">✖</span>
+
+    <img id="popup-img" src="" />
+
+    <h2 id="popup-title"></h2>
+
+    <p><b>Started:</b> <span id="popup-start"></span></p>
+
+    <div class="episodes">
+      <h3>Details</h3>
+      <ul id="popup-episodes"></ul>
+    </div>
+
+  </div>
+</div>
+<script>
+   
+function openPopup(title, img, start, items){
+  document.getElementById("popup").classList.add("active");
+  document.body.classList.add("popup-open");
+
+  document.getElementById("popup-title").innerText = title;
+  document.getElementById("popup-img").src = img;
+  document.getElementById("popup-start").innerText = start;
+
+  let list = document.getElementById("popup-episodes");
+  list.innerHTML = "";
+
+  items.forEach((item, index) => {
+    let li = document.createElement("li");
+    li.innerText = item;
+    list.appendChild(li);
+  });
+}
+
+function closePopup(){
+  document.getElementById("popup").classList.remove("active");
+  document.body.classList.remove("popup-open");
+}
+const faders = document.querySelectorAll(".fade-in");
+
+window.addEventListener("scroll", () => {
+  faders.forEach(el => {
+    const rect = el.getBoundingClientRect();
+
+    if(rect.top < window.innerHeight - 100){
+      el.classList.add("show");
+    }
+  });
+});
+const text = [
+  "I build Unreal Engine 5 systems...",
+  "I create immersive game worlds...",
+  "Future Computer Science Engineer..."
+];
+
+let line = 0;
+let char = 0;
+let currentText = "";
+let isDeleting = false;
+
+function typeEffect(){
+  let display = document.getElementById("typing");
+
+  if(line < text.length){
+    if(!isDeleting){
+      currentText = text[line].substring(0, char++);
+    } else {
+      currentText = text[line].substring(0, char--);
+    }
+
+    display.innerText = currentText;
+
+    if(!isDeleting && char === text[line].length){
+      isDeleting = true;
+      setTimeout(typeEffect, 1000);
+      return;
+    }
+
+    if(isDeleting && char === 0){
+      isDeleting = false;
+      line++;
+      if(line === text.length) line = 0;
+    }
+
+    setTimeout(typeEffect, isDeleting ? 50 : 100);
+  }
+}
+
+typeEffect();
+
+</script>
+
+
+</body>
+</html>
