@@ -260,6 +260,22 @@ body.popup-open{
     width: 250px;
     height: 150px;
   }
+  
+
+}
+@media (max-width: 768px){
+
+  #skills .cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    overflow-x: hidden;
+  }
+
+  #skills .card{
+    width: 100%;
+    height: 120px;
+  }
 
 }
 @media (max-width: 768px){
