@@ -1,4 +1,4 @@
-body{
+ body{
   background-color: #111;
   color: rgb(255, 255, 255);
   font-family: Arial;
@@ -67,9 +67,11 @@ nav a:hover{
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
+  filter: brightness(0.8);
 }
 .card:hover img{
   transform: scale(1.1);
+  filter: brightness(1);
 }
 .card-title{
   position: absolute;
@@ -102,6 +104,26 @@ section{
   scroll-margin-top: 80px;
   padding: 40px 10px;
   min-height: 40vh;
+  position: relative;
+}
+
+section::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #e50914, transparent);
+  opacity: 0.5;
+}
+button{
+  transition: all 0.3s ease;
+}
+
+button:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #e50914;
 }
 #about{
   padding-top: 20px;   /* smaller top space */
@@ -298,4 +320,20 @@ body.popup-open{
   backdrop-filter: blur(5px);
   }
 
+  
+}
+#contact{
+  background-color: #181818;
+  text-align: center;
+}
+.githublogo{
+  height: 51px;
+  width: 51px;
+}
+footer{
+  text-align: center;
+  padding: 20px;
+  background-color: #000;
+  font-size: 14px;
+  opacity: 0.7;
 }
