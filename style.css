@@ -228,3 +228,74 @@ body.popup-open{
   0%,100%{opacity: 1;}
   50%{opacity: 0;}
 }
+@media (max-width: 768px){
+
+  .cards{
+    overflow-x: auto;
+  }
+
+  .card{
+    width: 250px;
+    height: 150px;
+  }
+
+}
+@media (max-width: 768px){
+
+  .featured{
+    height: 60vh;
+    padding: 20px;
+  }
+
+  .featured h1{
+    font-size: 28px;
+  }
+
+  .featured p{
+    font-size: 14px;
+  }
+
+}
+@media (max-width: 768px){
+
+  header{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav{
+    margin-top: 10px;
+  }
+
+  nav a{
+    margin-left: 10px;
+    font-size: 14px;
+  }
+
+}
+@media (max-width: 768px){
+
+  section{
+    padding: 20px 10px;
+    min-height: auto;
+  }
+
+}
+@media (max-width: 768px){
+
+  .popup-content{
+    width: 90%;
+  }
+  .card-title{
+  font-size: 12px;
+  padding: 3px 6px;
+  }
+  .card-title{
+  bottom: 5px;
+  left: 5px;
+  }
+  .card-title{
+  backdrop-filter: blur(5px);
+  }
+
+}
