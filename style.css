@@ -2,6 +2,7 @@
   background-color: #111;
   color: rgb(255, 255, 255);
   font-family: Arial;
+  padding-top: 80px;
   
 }
 
@@ -9,12 +10,26 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   padding: 20px;
   background-color: #111;
-  position: sticky;
-  top: 0;
-}
 
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  box-sizing: border-box;  /* 🔥 THIS FIXES IT */
+
+  z-index: 1000;
+}
+*{
+  box-sizing: border-box;
+}
+nav a.active{
+  color: #e50914;
+  font-weight: bold;
+}
 .logo{
   color: red;
   font-size: 24px;
@@ -26,10 +41,27 @@ nav a{
   color: rgb(255, 255, 255);
   text-decoration: none;
   transition: 0.3s;
+  position: relative;
+}
+nav a::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+
+  width: 0%;
+  height: 2px;
+  background: #e50914;
+
+  transition: 0.3s;
 }
 
+nav a:hover::after{
+  width: 100%;
+}
 nav a:hover{
   color: #e50914; /* Netflix red */
+  font-weight: bold;
 }
 
 .hero{
@@ -102,9 +134,12 @@ html{
 }
 section{
   scroll-margin-top: 80px;
-  padding: 40px 10px;
+  padding: 40px 20px;
   min-height: 40vh;
   position: relative;
+  max-width: 1500px
+ 
+
 }
 
 section::after{
@@ -119,6 +154,7 @@ section::after{
 }
 button{
   transition: all 0.3s ease;
+  max-width: 100%;
 }
 
 button:hover{
@@ -152,6 +188,7 @@ button:hover{
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2000;
 
   transition: all 0.3s ease;
 }
@@ -167,6 +204,7 @@ button:hover{
   overflow-y: auto;
   border-radius: 10px;
   position: relative;
+  margin-top: 40px;
 
   transform: scale(0.8);
   transition: all 0.3s ease;
@@ -345,6 +383,9 @@ body.popup-open{
 .githublogo{
   height: 51px;
   width: 51px;
+}
+img{
+  max-width: 100%;
 }
 footer{
   text-align: center;
