@@ -33,7 +33,7 @@
       ['Got inspiration fo creating Mafia game by Watching Peaky BLinders and Played Mafia 1 Defenitive edition and find some of the bugs or feature which can uplift game mafia 1','I listed down all the bugs and features that lack in Mafia 1 game','started with basic 8 way walking system,Weapon system,Vehicle System',' Right now Writing Story for this Game'])">
       ▶ View Project
     </button>
-    <a href="resume (1).pdf" download>
+    <a href="Zamir_Memon_Resume.pdf" download>
       <button>⬇ Download Resume</button>
     </a>
   </div>
@@ -120,7 +120,7 @@ My goal is to become a skilled software engineer and build advanced game technol
     <p class="cert-sub">Published Research Paper — Game Security Engineering</p>
     <p class="research-summary">Tested 3 real-world DRM bypass tools, analyzed why each exploits the same client-side verification weakness, and proposed a server-side integrity framework that respects modding, offline play, and user privacy.</p>
   </div>
-  <div class="research-card" onclick="openPopup('NextToppers.com Security Vulnerability Report','images/timetable-admin.png','June 2026',['Full security assessment of nexttoppers.com, an Indian EdTech platform for CBSE classes 9th–12th','Severity summary: 2 Critical, 3 High, 1 Medium, 1 Low','Critical: unprotected CloudFront CDN exposing all paid lecture videos, Laravel debug log leaking app internals & infrastructure credentials, 4.2M user PII + 271K transaction records leaked','Additional: API credential leaks, IDOR in lecture access, missing batch authorization, exposed admin panel, missing security headers','Reported via email/Instagram June 6, 2026; follow-up through Aug 13, 2026 incl. all three founders — vendor non-responsive, retained as private research'])">
+  <div class="research-card" onclick="openPopup('NextToppers.com Security Vulnerability Report','','June 2026',['Full security assessment of nexttoppers.com, an Indian EdTech platform for CBSE classes 9th–12th','Severity summary: 2 Critical, 3 High, 1 Medium, 1 Low','Critical: unprotected CloudFront CDN exposing all paid lecture videos, Laravel debug log leaking app internals & infrastructure credentials, 4.2M user PII + 271K transaction records leaked','Additional: API credential leaks, IDOR in lecture access, missing batch authorization, exposed admin panel, missing security headers','Reported via email/Instagram June 6, 2026; follow-up through Aug 13, 2026 incl. all three founders — vendor non-responsive, retained as private research'])">
     <h3>NextToppers.com Security Vulnerability Report</h3>
     <p class="cert-sub">Private Security Research — Web Application Vulnerability Assessment</p>
     <p class="research-summary">Comprehensive vulnerability assessment of an Indian EdTech platform: 2 Critical, 3 High, 1 Medium, 1 Low — including an unprotected video CDN, an exposed Laravel debug log, and 4.2M user PII / 271K transaction records leaked via CloudFront.</p>
@@ -192,8 +192,16 @@ function openPopup(title, img, start, items){
   document.body.classList.add("popup-open");
 
   document.getElementById("popup-title").innerText = title;
-  document.getElementById("popup-img").src = img;
   document.getElementById("popup-start").innerText = start;
+
+  const popupImg = document.getElementById("popup-img");
+  if(img){
+    popupImg.src = img;
+    popupImg.style.display = "block";
+  } else {
+    popupImg.removeAttribute("src");
+    popupImg.style.display = "none";
+  }
 
   let list = document.getElementById("popup-episodes");
   list.innerHTML = "";
