@@ -17,6 +17,8 @@
     <a href="#skills">Skills</a>
     <a href="#Internships">Interships</a>
     <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#research">Research</a>
   </nav>
 </header>
 <section class="featured">
@@ -102,6 +104,38 @@ My goal is to become a skilled software engineer and build advanced game technol
     </div>
   </div>
 </section>
+<!-- Certifications -->
+<section id="certifications" class="fade-in">
+  <h2>Certifications</h2>
+  <div class="cert-list">
+    <div class="cert-item">
+      <h3>IBM Full Stack Software Developer</h3>
+      <p class="cert-sub">15 courses, Complete — React, Node.js, Express, Django, Flask, Python, Docker, Kubernetes, Cloud Computing, AI Applications, Generative AI</p>
+    </div>
+    <div class="cert-item">
+      <h3>Introduction to Programming with Python &amp; Java</h3>
+      <p class="cert-sub">University of Pennsylvania, 4 courses — Python Programming, Data Analysis, Java OOP, Data Structures</p>
+    </div>
+    <div class="cert-item">
+      <h3>JPMorgan Chase Software Engineering Simulation</h3>
+      <p class="cert-sub">Forage — Kafka, Spring Boot, REST APIs, database integration</p>
+    </div>
+  </div>
+</section>
+<!-- Research -->
+<section id="research" class="fade-in">
+  <h2>Research</h2>
+  <div class="research-card" onclick="openPopup('Client-Side DRM Bypass Methods','placeholders/bugbounty.svg','June 2026',['Published research paper in game security engineering','Tested 3 real-world DRM bypass tools (SteamTools, Nightlight, UplayR2) exploiting the same client-side verification flaw','Scanned each tool across 70+ antivirus engines on VirusTotal to document real malware risk','Proposed a server-side integrity framework using periodic hash-based attestation with a 48-hour offline grace period and a mod registration API','Respects offline play, modding support, and user privacy'])">
+    <h3>Client-Side DRM Bypass Methods and a Proposed Server-Side Integrity Framework</h3>
+    <p class="cert-sub">Published Research Paper — Game Security Engineering</p>
+    <p class="research-summary">Tested 3 real-world DRM bypass tools, analyzed why each exploits the same client-side verification weakness, and proposed a server-side integrity framework that respects modding, offline play, and user privacy.</p>
+  </div>
+  <div class="research-card" onclick="openPopup('NextToppers.com Security Vulnerability Report','images/timetable-admin.png','June 2026',['Full security assessment of nexttoppers.com, an Indian EdTech platform for CBSE classes 9th–12th','Severity summary: 2 Critical, 3 High, 1 Medium, 1 Low','Critical: unprotected CloudFront CDN exposing all paid lecture videos, Laravel debug log leaking app internals & infrastructure credentials, 4.2M user PII + 271K transaction records leaked','Additional: API credential leaks, IDOR in lecture access, missing batch authorization, exposed admin panel, missing security headers','Reported via email/Instagram June 6, 2026; follow-up through Aug 13, 2026 incl. all three founders — vendor non-responsive, retained as private research'])">
+    <h3>NextToppers.com Security Vulnerability Report</h3>
+    <p class="cert-sub">Private Security Research — Web Application Vulnerability Assessment</p>
+    <p class="research-summary">Comprehensive vulnerability assessment of an Indian EdTech platform: 2 Critical, 3 High, 1 Medium, 1 Low — including an unprotected video CDN, an exposed Laravel debug log, and 4.2M user PII / 271K transaction records leaked via CloudFront.</p>
+  </div>
+</section>
 <!-- Projects-->
 <section id="projects" class="fade-in">
   <h2>Projects</h2>
@@ -122,6 +156,21 @@ My goal is to become a skilled software engineer and build advanced game technol
       <div class="card" onclick="openPopup('Mafia Game','https://assetsio.gnwcdn.com/mafia-definitive-edition-review-a-generous-remake-that-still-shows-some-age-1600945390305.jpg?width=1600&height=900&fit=crop&quality=100&format=png&enable=upscale&auto=webp','November 2025',['Got inspiration fo creating Mafia game by Watching Peaky BLinders and Played Mafia 1 Defenitive edition and find some of the bugs or feature which can uplift game mafia 1','I listed down all the bugs and features that lack in Mafia 1 game','started with basic 8 way walking system,Weapon system,Vehicle System',' Right now Writing Story for this Game'])">
         <img src="https://assetsio.gnwcdn.com/mafia-definitive-edition-review-a-generous-remake-that-still-shows-some-age-1600945390305.jpg?width=1600&height=900&fit=crop&quality=100&format=png&enable=upscale&auto=webp">
         <div class="card-title">Mafia Game</div>
+      </div>
+
+      <div class="card" onclick="openPopup('Ember','placeholders/ember.svg','2026',['Local-first, self-improving AI assistant platform with a gamified chat UI','Forge master agent plans, writes, tests, and installs new Python skills at runtime','Multi-provider LLM routing (OpenAI, Anthropic, Gemini, Groq) via LiteLLM','Voice input + TTS, interactive skill apps, batch tool forging','Built with React 19, TypeScript, FastAPI, Docker'])">
+        <img src="placeholders/ember.svg">
+        <div class="card-title">Ember</div>
+      </div>
+
+      <div class="card" onclick="openPopup('Terwalk','images/terwalk-ui.jpg','Shipaton 2026',['Territory-conquest fitness game: walk in the real world to claim map tiles on OpenStreetMap','Custom geo engine: geohash viewport, haversine, Douglas-Peucker, ray-casting point-in-polygon','Anti-cheat: GPS speed filter (<=8 m/s) + mock-location rejection','Firebase Auth + Firestore with background location tracking','Built with React Native/Expo for Shipaton 2026 (RevenueCat)'])">
+        <img src="images/terwalk-ui.jpg">
+        <div class="card-title">Terwalk</div>
+      </div>
+
+      <div class="card" onclick="openPopup('School Timetable System','images/timetable-admin.png','2026',['Full-stack MERN web app that auto-generates conflict-free school timetables','Constraint-based scheduling: teacher quotas, max periods/day, no back-to-back conflicts','JWT-authenticated REST API with bcrypt, PDF export, Excel import/export, drag-and-drop UI','Deployed on Railway + MongoDB Atlas','Built with React 19, Node.js/Express 5, MongoDB/Mongoose'])">
+        <img src="images/timetable-admin.png">
+        <div class="card-title">Timetable System</div>
       </div>
 
     </div>
